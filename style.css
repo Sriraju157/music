@@ -1,59 +1,70 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    overflow: hidden;
 }
 
-.container {
+.music-container {
     text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.cube {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    transform: rotateX(30deg) rotateY(-45deg);
-    animation: rotateCube 8s infinite linear;
+.cover img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.face {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
+.info {
+    margin: 20px 0;
+}
+
+.controls {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 5px black;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
-.front { transform: translateZ(100px); }
-.back { transform: rotateY(180deg) translateZ(100px); }
-.right { transform: rotateY(90deg) translateZ(100px); }
-.left { transform: rotateY(-90deg) translateZ(100px); }
-.top { transform: rotateX(90deg) translateZ(100px); }
-.bottom { transform: rotateX(-90deg) translateZ(100px); }
+.btn {
+    background: #1e90ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
 
-@keyframes rotateCube {
-    0% { transform: rotateX(30deg) rotateY(-45deg); }
-    25% { transform: rotateX(30deg) rotateY(45deg); }
-    50% { transform: rotateX(-30deg) rotateY(135deg); }
-    75% { transform: rotateX(-30deg) rotateY(225deg); }
-    100% { transform: rotateX(30deg) rotateY(315deg); }
+.btn:hover {
+    background: #4682b4;
+}
+
+.progress-container {
+    background: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    height: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress {
+    background: #1e90ff;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
 }
